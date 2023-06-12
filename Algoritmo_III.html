@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1) Analiza los valores de un array y obtén el promedio (average) de esos valores.
+        function printAverage(x){
+            sum = 0;
+            for(var i=0; i<x.length; i++){
+                sum += x[i];
+
+            }
+            var promedio=sum/x.length;
+            return promedio;
+        }
+        y = printAverage([1,2,3]);
+        console.log(y); // should log 2
+        
+        y = printAverage([2,5,8]);
+        console.log(y); // should log 5
+
+        //2) Crea un array con todos los enteros impares (odd integers) entre 1 y 255 (inclusive)
+        function returnOddArray(){
+            var OddArray = [];
+            for(var i=1; i <= 55; i+=2){
+                OddArray.push(i);
+            }
+            return OddArray
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        //3) Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..
+        function squareValue(x){
+            var array=[];
+            for(var i=0; i<x.length; i++){
+                array.push(x[i] * x[i]);
+
+            }
+            return array;
+            }
+        y = squareValue([1,2,3]);
+        console.log(y); // should log [1,4,9]
+        
+        y = squareValue([2,5,8]);
+        console.log(y); // should log [4,25,64]
+
+
+    </script>
+</body>
+</html>
